@@ -33,7 +33,7 @@ class TestFizzBuzzMocked(pymock.PyMockTestCase):
         self.replay()
         
 	#call prod method 
-	self.fb.report(numbers, opener=mock_opener_interface.open)
+	self.fb.report(numbers, fileOpener=mock_opener_interface.open)
 	
 	# verify
 	self.verify()
