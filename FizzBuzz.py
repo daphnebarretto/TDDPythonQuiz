@@ -6,14 +6,14 @@ Q1. Why is the report method untestable ? [2 pts]
 
 Q2. How will you change the api of the report method to make it more testable ? [2 pts]
      def report(self, numbers, proxyfilehandler): or 
-    def report(self, numbers, mockFilehandler):
-
+    def report(self, numbers, fileOpener=open):
+    if no fileOpener is specified. we will call the default header
 
 """
 class FizzBuzz(object):
-    def report(self, numbers):
+     def report(self, numbers, fileOpener=open):
 
-        report_file = open('c:/temp/fizzbuzz_report.txt', 'w')
+        report_file = fileOpener('c:/temp/fizzbuzz_report.txt', 'w')
 
         for number in numbers:
             msg = str(number) + " "
