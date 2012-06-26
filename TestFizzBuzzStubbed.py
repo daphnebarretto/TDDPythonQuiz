@@ -56,17 +56,17 @@ class TestFizzBuzzStubbed(unittest.TestCase):
     def test_report(self):
         print "test_report"
         mystub = MyStub()
-      		numbers =[1,2,3,4]
-      		fileOpener = mystub.gen_open_stub()		
-      		report(numbers, fileOpener)
-      		self.assertEqual(values[2], '3 fizz \n')	
+      	numbers =[1,2,3,4]
+      	fileOpener = mystub.gen_open_stub()		
+      	report(numbers, fileOpener)
+      	self.assertEqual(values[2], '3 fizz \n')	
 
     def test_report_for_empty_list(self):
         print "test_report"
         mystub = MyStub()
- 	      numbers =[]
-		      fileOpener = mystub.gen_open_stub()		
-		      report(numbers, fileOpener)
+        numbers =[]
+        fileOpener = mystub.gen_open_stub()		
+        report(numbers, fileOpener)
 
 if __name__ == "__main__":
     unittest.main()
