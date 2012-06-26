@@ -4,13 +4,15 @@ import FizzBuzz
 """
 Q3. What will be printed when we execute 'python FizzBuzzStubbed.py' ? [3 pts]
 
-
-
-
-
-
-
-
+ assumimg it was python TestFizzBuzzStubbed.py :)
+    setUpClass FizzBuzzStubbed
+        setup
+        test_report
+        teardown
+        setup
+        test_report
+        teardown
+    tearDownClass
 
 Q4. Implement MyStub class so that you can send it as a fake object to the
     report method of FizzBuzz object from a test case. [3 pts]
