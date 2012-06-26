@@ -17,12 +17,18 @@ class TestFizzBuzzMocked(pymock.PyMockTestCase):
         self.fb = None
 
     def test_report(self):
-        #create mock 
+        #inpur numbers
+        numbers =[1,2,3,4]
+        
+    	#create mock file handler        
     	mock_opener_interface = self.mock()
         mock_file = self.mock()
+        
         #set expectations
-        self.expectAndReturn(mock_opener_interface.open('file.txt', 'w'), mock_file)			
-			
+        self.expectAndReturn(mock_opener_interface.open('c:/temp/fizzbuzz_report.txt', 'w'), mock_file)
+        mock_file.write("3 fizz \n
+        mock_file.close()
+        
 	#replay
         self.replay()
 	#call prod method 
