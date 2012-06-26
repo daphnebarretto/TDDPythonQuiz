@@ -59,7 +59,7 @@ class TestFizzBuzzStubbed(unittest.TestCase):
       	numbers =[1,2,3,4]
       	fileOpener = mystub.gen_open_stub()		
       	report(numbers, fileOpener)
-      	self.assertEqual(values[2], '3 fizz \n')	
+      	self.assertEqual(values[0], '3 fizz \n')	
 
     def test_report_for_empty_list(self):
         print "test_report"
@@ -67,6 +67,7 @@ class TestFizzBuzzStubbed(unittest.TestCase):
         numbers =[]
         fileOpener = mystub.gen_open_stub()		
         report(numbers, fileOpener)
+        # assert that values is empty. \donno how to do it in python :)
 
 if __name__ == "__main__":
     unittest.main()
