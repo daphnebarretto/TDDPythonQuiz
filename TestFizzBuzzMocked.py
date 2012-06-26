@@ -23,30 +23,12 @@ class TestFizzBuzzMocked(pymock.PyMockTestCase):
         #set expectations
         self.expectAndReturn(mock_opener_interface.open('file.txt', 'w'), mock_file)			
 			
-		#replay
+	#replay
         self.replay()
-		
-		#call prod method 
-		self.fb.report(numbers, opener=mock_opener_interface.open)
-		# verify
-		self.verify()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
+	#call prod method 
+	self.fb.report(numbers, opener=mock_opener_interface.open)
+	# verify
+	self.verify()
 
 if __name__ == "__main__":
     unittest.main()
