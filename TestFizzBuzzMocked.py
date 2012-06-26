@@ -26,13 +26,15 @@ class TestFizzBuzzMocked(pymock.PyMockTestCase):
         
         #set expectations
         self.expectAndReturn(mock_opener_interface.open('c:/temp/fizzbuzz_report.txt', 'w'), mock_file)
-        mock_file.write("3 fizz \n
+        mock_file.write("3 fizz \n")
         mock_file.close()
         
 	#replay
         self.replay()
+        
 	#call prod method 
 	self.fb.report(numbers, opener=mock_opener_interface.open)
+	
 	# verify
 	self.verify()
 
